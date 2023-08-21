@@ -1,0 +1,137 @@
+*{
+    margin: 0;padding: 0;box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #5E63BA;
+}
+.container{
+    width: 650px;
+    background-color: #fff;
+    display: flex;
+    padding: 60px 40px;
+    border-radius: 10px;
+    
+}
+.word-display{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.word-display .letter{
+    width: 30px;
+    margin-bottom: 15px;
+    border-bottom: 3px solid black;
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+}
+.word-display .letter.guessed{
+    border-color: transparent;
+    margin: -40px 0 35;
+}
+.game-box h4{
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.game-box h4 b{
+    font-weight: 600;
+}
+.game-box .gusse-txt b{
+    color: #ff0000;
+} 
+.game-box .keyboard{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 30px;
+}
+.keyboard button{
+    width: 50px;
+    color: #fff;
+    font-size: 1.1rem; 
+    font-weight: 600;
+    border-radius: 4px;
+    background-color: #5E63BA;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    padding: 7px;
+}
+.keyboard button:hover{
+    background-color: #8286c9;
+}
+.keyboard button[disabled]{
+    pointer-events: none;
+    opacity: 0.6;
+}
+
+.game-modal{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+    justify-content: center;
+    align-items: center;
+    transition: opacity .4s ease;
+    z-index: 999;
+}
+.game-modal.show{
+    opacity: 1; 
+    pointer-events: auto;
+    transition: opacity 0.4s 0.4s ease;
+    
+}
+.game-modal .content{
+    background-color: #fff;
+    width: 100%;
+    padding: 30px;
+    max-width: 420px;
+    text-align: center;
+  
+}
+
+.game-modal img{
+    max-width: 130px;
+    margin-bottom: 30px;
+}
+.game-modal h4{
+    font-size: 1.5rem;
+}
+.game-modal p{
+    font-size: 1.1rem;
+    margin: 15px 0 30px;
+    font-weight: 500;
+}
+.game-modal p b{
+    font-weight: 600;
+    color: #5E63BA;
+    font-size: 1.3rem;
+}
+
+.game-modal button{
+    padding: 10px 20px;
+    color: #fff;
+    font-size: 1.1rem; 
+    font-weight: 600;
+    border-radius: 4px;
+    background-color: #5E63BA;
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+.game-modal button:hover{
+    background-color: #8286c9;
+}
